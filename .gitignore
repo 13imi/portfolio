@@ -1,0 +1,4 @@
+bower_components/
+node_modules/
+guide/
+sass/bootstrap/_bootstrap-custom.scss
