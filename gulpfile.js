@@ -11,7 +11,7 @@ var ejs = require("gulp-ejs");
 gulp.task("server", function() {
     browser({
         server: {
-            baseDir: "dest/html"
+            baseDir: "dest"
         }
     });
 });
@@ -31,6 +31,12 @@ gulp.task("sass", function () {
         .pipe(browser.reload({stream:true}));
 });
 
+// for js
+gulp.task("js", function() {
+    gulp.src(["src/js/*.js"], { base: 'src/js' })
+        .pipe(gulp.dest("dest/js/"));
+});
+
 // for imagemin
 // 「imageMinTask」という名前のタスクを登録
 gulp.task("imagemin", function() {
@@ -45,12 +51,13 @@ gulp.task("imagemin", function() {
 gulp.task("ejs", function() {
     gulp.src(["src/ejs/**/*.ejs",'!' + "src/ejs/**/_*.ejs"], { base: 'src/ejs' })
         .pipe(ejs({}, {}, {"ext": ".html"}))
-        .pipe(gulp.dest("dest/html"));
+        .pipe(gulp.dest("dest"));
 });
 
 // Watch
 gulp.task("default",['server'], function() {
     gulp.watch("src/images/**", ["imagemin"]);
     gulp.watch("src/sass/**/*.scss",["sass"]);
+    gulp.watch("src/js/*.js",["js"]);
     gulp.watch("src/ejs/**/*.ejs",["ejs"]);
 });

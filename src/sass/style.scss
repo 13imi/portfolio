@@ -1,6 +1,60 @@
-/* test */
-// test
-// test
-// test
-// test
-// test
+$header: #FDFDFD;
+$bn: #E9F6FF;
+$conts: #F3F3F3;
+
+.header {
+    height: 400px;
+    background-color: $header;
+    position: relative;
+
+    > div {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .header-logo {
+        text-align: center;
+    }
+}
+
+.bn {
+    height: 150px;
+    background-color: $bn;
+}
+
+.conts {
+    background-color: $conts;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .conts--item {
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+.prof {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .prof--icon {
+        img {
+            width: 100px;
+        }
+    }
+
+    .prof--sns {
+        img {
+            float: right;
+            width: 30px;
+            margin-left: 10px;
+        }
+    }
+}
