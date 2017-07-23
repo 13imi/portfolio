@@ -2,7 +2,7 @@
 <html lang="ja">
   <% include common/_head %>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <% include common/_header %>
 
       <div class="row header">
@@ -19,24 +19,33 @@
       </div>
       <!-- /.header -->
 
-      <div class="row conts">
-        <div class="col-md-4 conts--item">
-          <img src="images/COLLAGREE01.png" class="" alt="COLLAGREE" />
-          <p>COLLAGREE</p>
-        </div>
-      </div>
+      <% include ./_work %>
+
       <!-- /.conts--item -->
 
       <div class="row prof">
-        <div class="col-md-2 col-md-offset-1 prof--icon">
-          <img class="img-circle" alt="プロフィール画像" src="images/meerkat.png"/>
-
+        <div class="hidden-xs">
+          <div class="col-md-2 col-md-offset-1 prof--icon">
+            <img class="img-circle" alt="プロフィール画像" src="images/meerkat.png"/>
+          </div>
+          <!-- /.prof--icon -->
+          <div class="col-md-9 prof--text">
+            <p class="prof--name logo-font">13imi</p>
+            <p class="prof--desc">1990年生まれ、東京在住。通信業界でサービス企画、開発に従事しながら、プライベートでもWebサイト構築などを行っています。</p>
+            <p class="prof--mail en-font">contact: yuma.imi13@gmail.com</p>
+          </div>
         </div>
-        <!-- /.prof--icon -->
-        <div class="col-md-9 prof--text">
-          <p class="prof--name logo-font">13imi</p>
-          <p class="prof--desc">1990年生まれ、東京在住。</p>
-          <p class="prof--mail en-font">contact: yuma.imi13@gmail.com</p>
+
+        <div class="visible-xs">
+          <div class="col-md-2 col-md-offset-1 prof--icon text-center">
+            <img class="img-circle" alt="プロフィール画像" src="images/meerkat.png"/>
+          </div>
+          <!-- /.prof--icon -->
+          <div class="col-md-9 prof--text">
+            <p class="prof--name logo-font prof--name__visible-xs">13imi</p>
+            <p class="prof--desc">1990年生まれ、東京在住。通信業界でサービス企画、開発に従事しながら、プライベートでもWebサイト構築などを行っています。</p>
+            <p class="prof--mail en-font">contact: yuma.imi13@gmail.com</p>
+          </div>
         </div>
         <!-- /.prof--text -->
         <div class="col-md-11 prof--sns">

@@ -1,6 +1,10 @@
 $header: #FDFDFD;
 $bn: #E9F6FF;
-$conts: #F3F3F3;
+$conts: #F9F9F9;
+
+$base-font-color: #444444;
+$gray-font-color: #808080;
+
 
 $base-font: "kozuka-gothic-pro", "clone-rounded-latin", "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
 $jp-font: "kozuka-gothic-pro", "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
@@ -13,14 +17,25 @@ $logo-font: "source-code-pro";
 
 body {
     font-family: $base-font;
+    color: $base-font-color;
+    font-weight: 300;
 }
 
 .logo-font {
     font-family: $logo-font;
+    font-weight: 400;
 }
 
 .en-font {
     font-family: $en-font;
+}
+
+.heading {
+    text-align: center;
+}
+
+.small-font {
+    font-size: 80%;
 }
 
 .header {
@@ -66,10 +81,23 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
 
+    .conts--heading {
+        margin-bottom: 40px;
+    }
+
     .conts--item {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 30px;
 
         img {
             width: 100%;
+        }
+
+        .conts--caption {
+            color: $gray-font-color;
+            text-align: center;
+            margin-top: 5px;
         }
     }
 
@@ -81,6 +109,10 @@ body {
 
     .prof--name {
         font-size: 170%
+    }
+
+    .prof--name__visible-xs {
+        margin-top: 30px;
     }
 
     .prof--icon {

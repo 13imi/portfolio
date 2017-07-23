@@ -1,0 +1,49 @@
+<%
+var data = [
+    {
+        "title": "collagree.com",
+        "desc": "オンライン議論システム",
+        "pic01": "images/COLLAGREE00.png"
+    },
+    {
+        "title": "tuge.me",
+        "desc": "幹事の店管理ツール",
+        "pic01": "images/tuge01.png"
+    },
+    {
+        "title": "takuya-kodama.tumblr.com",
+        "desc": "ポートフォリオサイト",
+        "pic01": "images/TAKUYA KODAMA_00_pc.png"
+    },
+    {
+        "title": "collagree.com",
+        "desc": "オンライン議論システム",
+        "pic01": "images/COLLAGREE00.png"
+    },
+    {
+        "title": "tuge.me",
+        "desc": "幹事の店管理ツール",
+        "pic01": "images/tuge01.png"
+    },
+    {
+        "title": "takuya-kodama.tumblr.com",
+        "desc": "ポートフォリオサイト",
+        "pic01": "images/TAKUYA KODAMA_00_pc.png"
+    }
+
+];
+%>
+
+<div class="row conts">
+  <div class="col-md-12 conts--heading heading">
+    <h2 class="en-font">work</h2>
+    <span class="small-font">実績</span>
+  </div>
+
+  <% data.forEach(function(d) { %>
+    <div class="col-md-3 conts--item">
+      <img src="<%= d.pic01 %>" class="" alt="<%= d.title %>" />
+      <p class="en-font conts--caption"><%= d.title %></p>
+    </div>
+  <% }); %>
+</div>

@@ -1,3 +1,4 @@
+
 // Demonstration of multiple force acting on
 // bodies (Mover class)
 // Bodies experience gravity continuously
@@ -57,13 +58,13 @@ function draw() {
 
 }
 
-function mousePressed() {
-    reset();
-}
+// function mousePressed() {
+    // reset();
+// }
 
 // Restart all the Mover objects randomly
 function reset() {
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < 5; i++) {
         movers[i] = new Mover(random(0.5, 3), 40+i*70, 0);
     }
 }
@@ -101,7 +102,7 @@ Liquid.prototype.calculateDrag = function(m) {
 };
 
 Liquid.prototype.display = function() {
-    var c = color('#90CAF9');
+    var c = color('#E9F6FF');
     noStroke();
     fill(c);
     rect(this.x, this.y, this.w, this.h);
@@ -131,7 +132,7 @@ Mover.prototype.update = function() {
 };
 
 Mover.prototype.display = function() {
-    stroke(0);
+    stroke(0, 127);
     strokeWeight(1);
     fill(255,127);
     ellipse(this.position.x,this.position.y,this.mass*16,this.mass*16);
