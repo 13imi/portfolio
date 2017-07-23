@@ -24,22 +24,35 @@ body {
 }
 
 .header {
-    height: 400px;
+    height: 500px;
     background-color: $header;
-    position: relative;
 
-    > div {
-        position: absolute;
-        top: 40%;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
+    .header--wrapper {
+        position: relative;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        .header--bn {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header--title {
+            width: 100%;
+            position: absolute;
+            top: 40%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     .header-logo {
         text-align: center;
+    }
 
+    .header-desc {
+        text-align: center;
     }
 }
 
