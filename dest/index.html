@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <meta charset="utf-8"/>
+  <title>13imi - Portfolio Site</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="css/fakeloader/fakeloader.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen">
+
+  <!-- For TypeFont -->
+  <script src="https://use.typekit.net/mhu6oqu.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/p5.min.js"></script>
+  <script type="text/javascript" src="js/fakeLoader.min.js"></script>
+  <script type="text/javascript" src="js/liquid.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
+</head>
+
+  <body>
+    <div id="fakeloader"></div>
+    <script type="text/javascript">
+ $("#fakeloader").fakeLoader({
+     timeToHide:1000, //Time in milliseconds for fakeLoader disappear
+     zIndex:"999",//Default zIndex
+     spinner:"spinner3",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+     bgColor:"#ddd", //Hex, RGB or RGBA colors
+ });
+</script>
+
+
+    <div class="container-fluid">
+      
+
+      <div class="row header">
+        <div class="col-md-12 header--wrapper">
+          <div class="header--bn" id="p5Canvas"></div>
+          <!-- /.header--bn -->
+          <div class="header--title">
+            <h1 class="header-logo logo-font">13imi</h1>
+            <!-- <p class="header-desc en-font">weekend engineer</p> -->
+          </div>
+          <!-- /.header--title -->
+        </div>
+        <!-- /.header--wrapper -->
+      </div>
+      <!-- /.header -->
+
+      
+
+<div class="row conts">
+  <div class="col-md-12 conts--heading heading">
+    <h2 class="en-font">work</h2>
+    <span class="small-font">実績</span>
+  </div>
+
+  
+    <div class="col-md-3 conts--item">
+      <a href="#" data-toggle="modal" data-target="#myModal_004">
+        <img src="images/ink01.png" class="" alt="13imi.me/ink" "/>
+      </a>
+      <p class="en-font conts--caption">13imi.me/ink</p>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> -->
+    <!-- Launch demo modal -->
+    <!-- </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade 13-modal" id="myModal_004" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content 13-modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title en-font" id="exampleModalLabel">13imi.me/ink</h5>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>splat◯◯n風のインクゲーム。p5.jsで。</p>
+                </div>
+              </div>
+              <div class="row">
+                
+                  <div class="col-md-6">
+                    <img src="images/ink01.png" class="" alt="13imi.me/ink" "/>
+                  </div>
+                
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./modal -->
+  
+    <div class="col-md-3 conts--item">
+      <a href="#" data-toggle="modal" data-target="#myModal_003">
+        <img src="images/tuge01.png" class="" alt="tuge.me" "/>
+      </a>
+      <p class="en-font conts--caption">tuge.me</p>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> -->
+    <!-- Launch demo modal -->
+    <!-- </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade 13-modal" id="myModal_003" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content 13-modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title en-font" id="exampleModalLabel">tuge.me</h5>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>幹事の店管理ツール。お気に入り店のURLを入力することで、食べログ、ホットペッパー、ぐるなびの情報を管理できます。Ruby on Railsを利用、サーバー構築も含めたデプロイを復習。</p>
+                </div>
+              </div>
+              <div class="row">
+                
+                  <div class="col-md-6">
+                    <img src="images/tuge01.png" class="" alt="tuge.me" "/>
+                  </div>
+                
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./modal -->
+  
+    <div class="col-md-3 conts--item">
+      <a href="#" data-toggle="modal" data-target="#myModal_002">
+        <img src="images/TAKUYA KODAMA_00_pc.png" class="" alt="takuya-kodama.tumblr.com" "/>
+      </a>
+      <p class="en-font conts--caption">takuya-kodama.tumblr.com</p>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> -->
+    <!-- Launch demo modal -->
+    <!-- </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade 13-modal" id="myModal_002" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content 13-modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title en-font" id="exampleModalLabel">takuya-kodama.tumblr.com</h5>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>友人のポートフォリオサイト。Tumblrのカスタマイズであり、更新性を重視。</p>
+                </div>
+              </div>
+              <div class="row">
+                
+                  <div class="col-md-6">
+                    <img src="images/TAKUYA KODAMA_00_pc.png" class="" alt="takuya-kodama.tumblr.com" "/>
+                  </div>
+                
+                  <div class="col-md-6">
+                    <img src="images/TAKUYA KODAMA_02_sp.png" class="" alt="takuya-kodama.tumblr.com" "/>
+                  </div>
+                
+                  <div class="col-md-6">
+                    <img src="images/TAKUYA KODAMA_03_sp.png" class="" alt="takuya-kodama.tumblr.com" "/>
+                  </div>
+                
+                  <div class="col-md-6">
+                    <img src="images/TAKUYA KODAMA_05_sp.png" class="" alt="takuya-kodama.tumblr.com" "/>
+                  </div>
+                
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./modal -->
+  
+    <div class="col-md-3 conts--item">
+      <a href="#" data-toggle="modal" data-target="#myModal_001">
+        <img src="images/COLLAGREE00.png" class="" alt="collagree.com" "/>
+      </a>
+      <p class="en-font conts--caption">collagree.com</p>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> -->
+    <!-- Launch demo modal -->
+    <!-- </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade 13-modal" id="myModal_001" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content 13-modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title en-font" id="exampleModalLabel">collagree.com</h5>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>オンライン議論システム。修士論文の研究テーマに利用し、名古屋市と社会実験を実施しました。</p>
+                </div>
+              </div>
+              <div class="row">
+                
+                  <div class="col-md-6">
+                    <img src="images/COLLAGREE00.png" class="" alt="collagree.com" "/>
+                  </div>
+                
+                  <div class="col-md-6">
+                    <img src="images/COLLAGREE01.png" class="" alt="collagree.com" "/>
+                  </div>
+                
+                  <div class="col-md-6">
+                    <img src="images/COLLAGREE04.png" class="" alt="collagree.com" "/>
+                  </div>
+                
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./modal -->
+  
+</div>
+
+
+      <!-- /.conts--item -->
+
+      <div class="row prof">
+        <div class="hidden-xs">
+          <div class="col-md-2 col-md-offset-1 prof--icon">
+            <img class="img-circle" alt="プロフィール画像" src="images/meerkat.png"/>
+          </div>
+          <!-- /.prof--icon -->
+          <div class="col-sm-9 prof--text">
+            <p class="prof--name logo-font">13imi</p>
+            <p class="prof--desc">1990年生まれ、東京在住。情報・通信企業でサービス企画、開発に従事しながら、プライベートでもWebサイト構築などを行っています。</p>
+            <p class="prof--mail en-font">contact: yuma.imi13@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="visible-xs">
+          <div class="col-sm-2 col-sm-offset-1 prof--icon text-center">
+            <img class="img-circle" alt="プロフィール画像" src="images/meerkat.png"/>
+          </div>
+          <!-- /.prof--icon -->
+          <div class="col-sm-9 prof--text">
+            <p class="prof--name logo-font prof--name__visible-xs">13imi</p>
+            <p class="prof--desc">1990年生まれ、東京在住。通信業界でサービス企画、開発に従事しながら、プライベートでもWebサイト構築などを行っています。</p>
+            <p class="prof--mail en-font">contact: yuma.imi13@gmail.com</p>
+          </div>
+        </div>
+        <!-- /.prof--text -->
+        <div class="col-sm-11 prof--sns">
+          <a href="https://github.com/13imi"><img src="images/github.svg" class="" alt="" /></a>
+          <a href="https://www.facebook.com/13imi"><img src="images/facebook.svg" class="" alt="" /></a>
+          <a href="https://twitter.com/13imi"><img src="images/twitter.svg" class="" alt="" /></a>
+        </div>
+      </div>
+      <!-- /.prof -->
+
+    </div>
+    <!-- /.container -->
+
+
+    <article>
+    </article>
+    <footer>
+  <div class="col-md-12 text-center">
+    <p class="en-font">&copy; 13imi</p>
+  </div>
+</footer>
+
+  </body>
+</html>

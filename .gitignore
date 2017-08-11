@@ -1,5 +1,4 @@
 bower_components/
-dest/
 guide/
 node_modules/
 src/sass/bootstrap/_bootstrap-custom.scss
