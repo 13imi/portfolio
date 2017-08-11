@@ -88,9 +88,9 @@ var data = [
     <!-- </button> -->
 
     <!-- Modal -->
-    <div class="modal fade 13-modal" id="myModal_<%= d.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade conts--modal" id="myModal_<%= d.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content 13-modal-content">
+        <div class="modal-content conts--modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -107,7 +107,7 @@ var data = [
               </div>
               <div class="row">
                 <% d.pic.forEach(function(p){ %>
-                  <div class="col-md-6">
+                  <div class="col-md-6 conts--modal-img">
                     <img src="<%= p.url %>" class="" alt="<%= d.title %>" "/>
                   </div>
                 <% }); %>

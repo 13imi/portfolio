@@ -84,6 +84,8 @@ body {
         margin-top: 30px; }
     .modal .modal-content .modal-body img {
       width: 100%; }
+    .modal .modal-content .modal-body .conts--modal-img {
+      margin-bottom: 30px; }
     .modal .modal-content .modal-footer {
       border: none; }
 

@@ -131,10 +131,13 @@ body {
 
         .modal-body {
             img {
-            width: 100%;
+                width: 100%;
+            }
+
+            .conts--modal-img {
+                margin-bottom: 30px;
             }
         }
-
 
         .modal-footer {
             border: none;
