@@ -1,37 +1,71 @@
 <%
 var data = [
     {
-        "title": "collagree.com",
-        "desc": "オンライン議論システム",
-        "pic01": "images/COLLAGREE00.png"
+        "id": "004",
+        "title": "13imi.me/ink",
+        "desc": "splat◯◯n風のインクゲーム。p5.jsで。",
+        "pic": [
+            {
+                "url": "images/ink01.png",
+                "id": "001"
+            },
+        ]
     },
     {
+        "id": "003",
         "title": "tuge.me",
-        "desc": "幹事の店管理ツール",
-        "pic01": "images/tuge01.png"
+        "desc": "幹事の店管理ツール。お気に入り店のURLを入力することで、食べログ、ホットペッパー、ぐるなびの情報を管理できます。Ruby on Railsを利用、サーバー構築も含めたデプロイを復習。",
+        "pic": [
+            {
+                "url": "images/tuge01.png",
+                "id": "001"
+            },
+        ]
     },
     {
+        "id": "002",
         "title": "takuya-kodama.tumblr.com",
-        "desc": "ポートフォリオサイト",
-        "pic01": "images/TAKUYA KODAMA_00_pc.png"
+        "desc": "友人のポートフォリオサイト。Tumblrのカスタマイズであり、更新性を重視。",
+        "pic": [
+            {
+                "url":  "images/TAKUYA KODAMA_00_pc.png",
+                "id": "001"
+            },
+            {
+                "url":  "images/TAKUYA KODAMA_02_sp.png",
+                "id": "002"
+            },
+            {
+                "url":  "images/TAKUYA KODAMA_03_sp.png",
+                "id": "003"
+            },
+            {
+                "url":  "images/TAKUYA KODAMA_05_sp.png",
+                "id": "004"
+            }
+        ]
     },
     {
+        "id": "001",
         "title": "collagree.com",
-        "desc": "オンライン議論システム",
-        "pic01": "images/COLLAGREE00.png"
-    },
-    {
-        "title": "tuge.me",
-        "desc": "幹事の店管理ツール",
-        "pic01": "images/tuge01.png"
-    },
-    {
-        "title": "takuya-kodama.tumblr.com",
-        "desc": "ポートフォリオサイト",
-        "pic01": "images/TAKUYA KODAMA_00_pc.png"
+        "desc": "オンライン議論システム。修士論文の研究テーマに利用し、名古屋市と社会実験を実施しました。",
+        "pic": [
+            {
+                "url": "images/COLLAGREE00.png",
+                "id": "001"
+            },
+            {
+                "url": "images/COLLAGREE01.png",
+                "id": "002"
+            },
+            {
+                "url": "images/COLLAGREE04.png",
+                "id": "002"
+            }
+        ]
     }
-
 ];
+
 %>
 
 <div class="row conts">
@@ -42,8 +76,50 @@ var data = [
 
   <% data.forEach(function(d) { %>
     <div class="col-md-3 conts--item">
-      <img src="<%= d.pic01 %>" class="" alt="<%= d.title %>" />
+      <a href="#" data-toggle="modal" data-target="#myModal_<%= d.id %>">
+        <img src="<%= d.pic[0].url %>" class="" alt="<%= d.title %>" "/>
+      </a>
       <p class="en-font conts--caption"><%= d.title %></p>
     </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> -->
+    <!-- Launch demo modal -->
+    <!-- </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade 13-modal" id="myModal_<%= d.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content 13-modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title en-font" id="exampleModalLabel"><%= d.title %></h5>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <p><%= d.desc %></p>
+                </div>
+              </div>
+              <div class="row">
+                <% d.pic.forEach(function(p){ %>
+                  <div class="col-md-6">
+                    <img src="<%= p.url %>" class="" alt="<%= d.title %>" "/>
+                  </div>
+                <% }); %>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./modal -->
   <% }); %>
 </div>

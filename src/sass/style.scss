@@ -15,6 +15,14 @@ $logo-font: "source-code-pro";
 /* tk-kozuka-gothic-pro */
 /* tk-clone-rounded-latin */
 
+/* html { */
+/* visibility: hidden; */
+/* } */
+
+/* html.wf-active { */
+/* visibility: visible; */
+/* } */
+
 body {
     font-family: $base-font;
     color: $base-font-color;
@@ -101,6 +109,37 @@ body {
         }
     }
 
+}
+
+.modal {
+    background-color: rgba(255,255,255,0.9);
+
+    .modal-content {
+        background: none;
+        color: $base-font-color;
+        border: 0;
+        box-shadow: none;
+        font-weight: 300;
+
+        .modal-header {
+            border: none;
+
+            .modal-title {
+                margin-top: 30px;
+            }
+        }
+
+        .modal-body {
+            img {
+            width: 100%;
+            }
+        }
+
+
+        .modal-footer {
+            border: none;
+        }
+    }
 }
 
 .prof {
