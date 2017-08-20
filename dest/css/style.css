@@ -13,6 +13,13 @@ body {
   color: #444444;
   font-weight: 300; }
 
+a {
+  color: #444444;
+  border-bottom: 1px dotted #808080; }
+  a:hover {
+    color: #808080;
+    text-decoration: none; }
+
 .logo-font {
   font-family: "source-code-pro";
   font-weight: 400; }
@@ -84,8 +91,12 @@ body {
         margin-top: 30px; }
     .modal .modal-content .modal-body img {
       width: 100%; }
+    .modal .modal-content .modal-body .conts--modal-outline, .modal .modal-content .modal-body .conts--modal-credit {
+      margin-bottom: 30px;
+      line-height: 1.7; }
     .modal .modal-content .modal-body .conts--modal-img {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      line-height: 1.7; }
     .modal .modal-content .modal-footer {
       border: none; }
 

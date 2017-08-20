@@ -8,6 +8,13 @@ var frontnote = require("gulp-frontnote");
 var autoprefixer = require("gulp-autoprefixer");
 var ejs = require("gulp-ejs");
 
+const common = {
+  fonts: {
+    src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*.{eot,svg,ttf,woff,woff2}',
+    dist: 'dest/fonts'
+  }
+};
+
 gulp.task("server", function() {
     browser({
         server: {
@@ -47,6 +54,12 @@ gulp.task("imagemin", function() {
         .pipe(gulp.dest("dest/images/")); // minified_imagesフォルダー以下に保存
 });
 
+// for fonts
+gulp.task("fonts", () => {
+    gulp.src(common.fonts.src)
+        .pipe(gulp.dest(common.fonts.dist));
+});
+
 // for ejs
 gulp.task("ejs", function() {
     gulp.src(["src/ejs/**/*.ejs",'!' + "src/ejs/**/_*.ejs"], { base: 'src/ejs' })
@@ -55,7 +68,7 @@ gulp.task("ejs", function() {
 });
 
 // Watch
-gulp.task("default",['server'], function() {
+gulp.task("default",['server', 'fonts'], function() {
     gulp.watch("src/images/**", ["imagemin"]);
     gulp.watch("src/sass/**/*.scss",["sass"]);
     gulp.watch("src/js/*.js",["js"]);
