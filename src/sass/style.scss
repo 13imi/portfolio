@@ -149,6 +149,11 @@ a {
                 line-height: 1.7;
             }
 
+            .conts--modal-outline-title, .conts--modal-credit-title {
+                border-bottom: 1px solid $gray-font-color;
+            }
+
+
             .conts--modal-img {
                 margin-bottom: 30px;
                 line-height: 1.7;

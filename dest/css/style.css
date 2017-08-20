@@ -94,6 +94,8 @@ a {
     .modal .modal-content .modal-body .conts--modal-outline, .modal .modal-content .modal-body .conts--modal-credit {
       margin-bottom: 30px;
       line-height: 1.7; }
+    .modal .modal-content .modal-body .conts--modal-outline-title, .modal .modal-content .modal-body .conts--modal-credit-title {
+      border-bottom: 1px solid #808080; }
     .modal .modal-content .modal-body .conts--modal-img {
       margin-bottom: 30px;
       line-height: 1.7; }
