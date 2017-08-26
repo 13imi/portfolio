@@ -18,23 +18,29 @@
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/p5.min.js"></script>
-  <script type="text/javascript" src="js/fakeLoader.min.js"></script>
-  <script type="text/javascript" src="js/liquid.js"></script>
+  <script type="text/javascript" src="js/loader.js"></script>
   <script type="text/javascript" src="js/modal.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </head>
 
   <body>
-    <div id="fakeloader"></div>
+    <div id="loader-bg">
+      <div id="loader">
+        <!-- <img src="img-loading.gif" width="80" height="80" alt="Now Loading..." /> -->
+        <p>Now Loading...</p>
+      </div>
+    </div>
+
     <script type="text/javascript">
- $("#fakeloader").fakeLoader({
-     timeToHide:1000, //Time in milliseconds for fakeLoader disappear
-     zIndex:"999",//Default zIndex
-     spinner:"spinner3",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
-     bgColor:"#ddd", //Hex, RGB or RGBA colors
- });
+ /* $("#fakeloader").fakeLoader({
+  *     timeToHide:1000, //Time in milliseconds for fakeLoader disappear
+  *     zIndex:"999",//Default zIndex
+  *     spinner:"spinner3",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+  *     bgColor:"#ddd", //Hex, RGB or RGBA colors
+  * });*/
 </script>
+<script type="text/javascript" src="js/liquid.js"></script>
 
 
     <div class="container-fluid">

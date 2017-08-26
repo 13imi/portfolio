@@ -12,7 +12,7 @@ var liquid;
 // var img;
 
 function preload() {
-  // img = loadImage("img/crab.png");
+    // img = loadImage("img/crab.png");
 }
 
 var devise = {};
@@ -59,7 +59,7 @@ function draw() {
 }
 
 // function mousePressed() {
-    // reset();
+// reset();
 // }
 
 // Restart all the Mover objects randomly
