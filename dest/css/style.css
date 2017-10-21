@@ -132,8 +132,10 @@ a {
     font-size: 170%; }
   .prof .prof--name__visible-xs {
     margin-top: 30px; }
-  .prof .prof--icon img {
-    width: 100px; }
+  .prof .prof--icon {
+    text-align: center; }
+    .prof .prof--icon img {
+      width: 100px; }
   .prof .prof--sns img {
     float: right;
     width: 30px;

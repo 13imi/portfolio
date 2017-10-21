@@ -4,10 +4,10 @@ var data = [
         "id": "004",
         "title": "13imi.me/ink",
         "url": "http://13imi.me/www/p5/ink.html",
-        "desc": "splat◯◯n風のインクアクションをただただ楽しめるページ。インクの質感をノイズで表現。p5.jsで。",
+        "desc": "インクアクションで浮き出る魚は何でしょう。インクの質感をノイズで表現。p5.jsで。",
         "pic": [
             {
-                "url": "images/ink01.png",
+                "url": "images/coelacanth01.png",
                 "id": "001"
             },
         ]
@@ -92,58 +92,65 @@ var data = [
     <h2 class="en-font">work</h2>
     <span class="small-font">実績</span>
   </div>
+</div>
 
-  <% data.forEach(function(d) { %>
-    <div class="col-md-3 conts--item">
-      <a href="#" data-toggle="modal" data-target="#myModal_<%= d.id %>">
-        <img src="<%= d.pic[0].url %>" class="" alt="<%= d.title %>" "/>
-      </a>
-      <p class="en-font conts--caption"><%= d.title %></p>
-    </div>
+<div class="row conts">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="row conts">
 
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> -->
-    <!-- Launch demo modal -->
-    <!-- </button> -->
+      <% data.forEach(function(d) { %>
+        <div class="col-md-3 conts--item">
+          <a href="#" data-toggle="modal" data-target="#myModal_<%= d.id %>">
+            <img src="<%= d.pic[0].url %>" class="" alt="<%= d.title %>" "/>
+          </a>
+          <p class="en-font conts--caption"><%= d.title %></p>
+        </div>
 
-    <!-- Modal -->
-    <div class="modal fade conts--modal" id="myModal_<%= d.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content conts--modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h3 class="modal-title en-font" id="exampleModalLabel"><%= d.title %>
-              <% if (typeof d.url !== 'undefined') { %>
-              <small><a href="<%= d.url %>" target=”_new”><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></small>
-              <% } %>
-            </h3>
-          </div>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> -->
+        <!-- Launch demo modal -->
+        <!-- </button> -->
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-4 col-md-push-8">
-                  <p class="conts--modal-outline-title">Outline</p>
-                  <p class="conts--modal-outline"><%= d.desc %></p>
-                </div>
-                <div class="col-md-8 col-md-pull-4">
-                  <% d.pic.forEach(function(p){ %>
-                    <div class="conts--modal-img">
-                      <img src="<%= p.url %>" class="" alt="<%= d.title %>" "/>
+        <!-- Modal -->
+        <div class="modal fade conts--modal" id="myModal_<%= d.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content conts--modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title en-font" id="exampleModalLabel"><%= d.title %>
+                  <% if (typeof d.url !== 'undefined') { %>
+                    <small><a href="<%= d.url %>" target=”_new”><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></small>
+                  <% } %>
+                </h3>
+              </div>
+
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-4 col-md-push-8">
+                      <p class="conts--modal-outline-title">Outline</p>
+                      <p class="conts--modal-outline"><%= d.desc %></p>
                     </div>
-                  <% }); %>
+                    <div class="col-md-8 col-md-pull-4">
+                      <% d.pic.forEach(function(p){ %>
+                        <div class="conts--modal-img">
+                          <img src="<%= p.url %>" class="" alt="<%= d.title %>" "/>
+                        </div>
+                      <% }); %>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <div class="modal-footer">
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-          </div>
         </div>
-      </div>
+        <!-- ./modal -->
+      <% }); %>
     </div>
-    <!-- ./modal -->
-  <% }); %>
+  </div>
 </div>
